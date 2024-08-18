@@ -1,0 +1,74 @@
+<h2 class="text-2xl font-bold text-[#566573]">Add Vehicle</h2>
+<div class="container">
+    <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+        <div class="form-container">
+            <mat-form-field class="mat-fields">
+                <mat-label>License</mat-label>
+                <input matInput formControlName="license" placeholder="Enter License">
+                <mat-error> *License is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Type</mat-label>
+                <mat-select formControlName="type">
+                    <mat-option *ngFor="let item of vehiclesType" [value]="item"
+                        >{{item}}</mat-option>
+                </mat-select>
+                <mat-error> *Type is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Owner Name</mat-label>
+                <input matInput formControlName="owner_name" placeholder="Enter Owner Name">
+                <mat-error> *Owner Name is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Owner Phone</mat-label>
+                <input matInput formControlName="owner_phone" placeholder="Enter Owner Phone" type="number">
+                <mat-error> *Owner Phone is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                    <mat-option *ngFor="let item of vehiclesStatus" [value]="item"
+                        >{{item}}</mat-option>
+                </mat-select>
+                <mat-error> *Status is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Owner Address</mat-label>
+                <input matInput formControlName="owner_address" placeholder="Enter Owner Address">
+                <mat-error> *Owner Address is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Entry</mat-label>
+                <input matInput formControlName="entry" placeholder="Enter Entry Time" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1">
+                <owl-date-time #dt1></owl-date-time>
+                <mat-error> *Entry is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Exit</mat-label>
+                <input matInput formControlName="exit" placeholder="Enter Exit Time" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2">
+                <owl-date-time #dt2></owl-date-time>
+                <mat-error> *Exit is required! </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="mat-fields">
+                <mat-label>Charge</mat-label>
+                <mat-select formControlName="charge">
+                    <mat-option *ngFor="let item of vehiclesCharge" [value]="item"
+                        >{{item}}</mat-option>
+                </mat-select>
+                <mat-error> *Charge is required! </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="flex justify-end pr-10">
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

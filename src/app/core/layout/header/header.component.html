@@ -1,0 +1,14 @@
+<div class="header-container flex justify-between items-center pl-5 text-2xl font-bold text-[#566573]">
+    Header Content
+    <mat-icon class="mr-10 cursor-pointer"  mat-ripple [matMenuTriggerFor]="profileDropdown">notifications</mat-icon>
+</div>
+
+<mat-menu #profileDropdown="matMenu" xPosition="before" class="bg-white notification-menu">
+    <div class="w-full flex gap-2 items-center pb-4">
+      <mat-icon class="text-2xl">notification</mat-icon>
+      <h2 class="text-xl">Notification List
+      </h2>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-menu>

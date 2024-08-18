@@ -1,0 +1,17 @@
+.header-container {
+    width: 100%;
+    background-color: #EAFAF1;
+    min-height: 100px;
+}
+
+::ng-deep {
+    .notification-menu {
+        width: 270px !important;
+        height: 370px !important;
+        //   @apply bg-slate-300 border-green-300 border-1.5 p-6;
+        background: #F4F8FF;
+        background: #F4F8FF;
+        box-shadow: 0px 0px 11px rgba(40, 78, 153, 0.2);
+        padding: 25px;
+    }
+}

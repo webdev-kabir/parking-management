@@ -1,0 +1,16 @@
+<!-- <app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer> -->
+<div class="root-container">
+    <mat-sidenav-container class="custom-sidenav-container">
+      <mat-sidenav #sidenav class="custom-sidenav"  mode='side' opened="true">
+        <app-sidebar></app-sidebar>
+      </mat-sidenav>
+      <mat-sidenav-content class="custom-sidenav-content">
+        <app-header></app-header>
+        <main class="p-page mt-8 pl-5">
+            <router-outlet></router-outlet>
+        </main>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
