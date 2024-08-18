@@ -92,5 +92,7 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
         </mat-table>
+        
     </div>
+    <div *ngIf="!dataSource.length" class="text-2xl font-bold flex justify-center pt-20">No Vehicles Added Yet!</div>
 </div>

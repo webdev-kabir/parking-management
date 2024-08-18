@@ -40,7 +40,7 @@ export class VehiclesListComponent implements OnInit{
   ngOnInit(): void {
     //@ts-ignore
     const storedFormData = JSON.parse(localStorage.getItem('formData'))
-    this.dataSource = storedFormData;
+    this.dataSource = [];
   }
   updateUser(vehicle: any): void {
     this.router.navigate(['vehicles/update-vehicles', vehicle.license])
